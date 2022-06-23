@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "793624205645",
+    "firebase_url": "https://rutasegura-326e0-default-rtdb.firebaseio.com",
+    "project_id": "rutasegura-326e0",
+    "storage_bucket": "rutasegura-326e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793624205645:android:76d2b3e1b05f1d79a9ff04",
+        "android_client_info": {
+          "package_name": "cl.rutasegura.rutaseguracliente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793624205645-qe6q6v9m2bu52l3no295k65v4msg0lqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.rutasegura.rutaseguracliente",
+            "certificate_hash": "f8e59197c13482978bf0269b0ebabc63dedad232"
+          }
+        },
+        {
+          "client_id": "793624205645-ab60ljljm8aro987god5hoabf977feil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdE8xHrycsPk9k1JWSoznbdfZD6Wa2DBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793624205645-ab60ljljm8aro987god5hoabf977feil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793624205645:android:27de9cc51403c963a9ff04",
+        "android_client_info": {
+          "package_name": "cl.rutasegura.rutaseguradriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793624205645-s96puulkiqq5dfndhg4vh5637eatf9q8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.rutasegura.rutaseguradriver",
+            "certificate_hash": "f8e59197c13482978bf0269b0ebabc63dedad232"
+          }
+        },
+        {
+          "client_id": "793624205645-ab60ljljm8aro987god5hoabf977feil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdE8xHrycsPk9k1JWSoznbdfZD6Wa2DBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793624205645-ab60ljljm8aro987god5hoabf977feil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

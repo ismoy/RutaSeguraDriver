@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewHistoryBooking"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/man"
+            android:scaleType="centerCrop"
+            app:civ_border_width="2dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:civ_border_color="@android:color/holo_blue_light"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carlos Andres"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Origen:"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:id="@+id/textViewOrigin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avenida falsa con calle falsa"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destino:"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:id="@+id/textViewDestination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avenida falsa con calle falsa"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calificacion obtenida:"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:id="@+id/textViewCalification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distancia:"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:id="@+id/textViewdistancias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tiempo:"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:id="@+id/textViewtiempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:id="@+id/textViewprecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="you_are_new_create_an_account">You are new? Create an account</string>
+    <string name="firstname">FisrtName</string>
+    <string name="defaultfirstname">Jhon</string>
+    <string name="defaultlastname">Doe</string>
+    <string name="lastname">LastName</string>
+    <string name="confirmpassword">Confim Password</string>
+    <string name="brand">Vehicule Brand</string>
+    <string name="defaultbrand">Tesla</string>
+    <string name="defaultlicenseplate">XDGR2343</string>
+    <string name="signup">Register</string>
+    <string name="licenceplate">License Plate</string>
+    <string name="error_empty">\"Por favor ingrese el valor solicitado \"</string>
+    <string name="no_match_password">Password do not match</string>
+    <string name="invalid_email">Por favor ingrese un email valido</string>
+    <string name="only_letter">Por favor ingrese solo letra</string>
+    <string name="Loading___">Loading...</string>
+</resources>

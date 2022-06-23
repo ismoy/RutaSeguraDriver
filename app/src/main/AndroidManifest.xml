@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cl.rutasegura.rutaseguradriver">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RutaSeguraDriver"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.metricsdrivers.MetricsDriversActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.historybooking.HistoryBookingDetailDriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.historybooking.HistoryBookingDriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.calificationclient.CalificationClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.maps.MapsDriverBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.maps.MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.register.RegisterActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.login.LoginActivity" />
+        <activity
+            android:name=".activities.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.splashscreen.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.notificationboocking.NotificationBookingActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <receiver
+            android:name=".receivers.AcceptReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name=".receivers.CancelReceiver"
+            android:enabled="true" />
+
+        <service
+            android:name=".services.MyFirebaseMessagingClient"
+            android:exported="false"
+            tools:ignore="IntentFilterExportedReceiver">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.ForegroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location" />
+
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+    </application>
+
+</manifest>

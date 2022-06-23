@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Ruta Segura Driver</string>
+    <string name="password">Password</string>
+    <string name="defaultpassword">*********</string>
+    <string name="defaulemail">jhondoe@gmail.com</string>
+    <string name="open">navigation_drawer_open</string>
+    <string name="close">navigation_drawer_close</string>
+    <string name="email">Email</string>
+    <string name="singin">Sing In</string>
+    <string name="forgot">Forgot Your Password? Tap Here</string>
+    <string name="you_are_new_create_an_account">You are new? Create an account</string>
+    <string name="firstname">FisrtName</string>
+    <string name="defaultfirstname">Jhon</string>
+    <string name="defaultlastname">Doe</string>
+    <string name="lastname">LastName</string>
+    <string name="confirmpassword">Confim Password</string>
+    <string name="brand">Vehicule Brand</string>
+    <string name="defaultbrand">Tesla</string>
+    <string name="defaultlicenseplate">XDGR2343</string>
+    <string name="signup">Register</string>
+    <string name="licenceplate">License Plate</string>
+    <string name="error_empty">\"Por favor ingrese el valor solicitado \"</string>
+    <string name="short_passord">The password must be at least 6 characters long</string>
+    <string name="no_match_password">Password do not match</string>
+    <string name="invalid_email">Por favor ingrese un email valido</string>
+    <string name="only_letter">Por favor ingrese solo letra</string>
+    <string name="Loading___">Loading...</string>
+    <string name="Youraccounthasbeencreatedsuccessfully">Your account has been created successfully. Check your email to activate the account</string>
+
+</resources>
