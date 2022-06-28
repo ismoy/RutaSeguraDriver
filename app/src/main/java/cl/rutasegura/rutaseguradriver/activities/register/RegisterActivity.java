@@ -294,7 +294,7 @@ public class RegisterActivity extends AppCompatActivity {
         mProgressDialog.dismiss();
         if (task.isSuccessful()) {
             String id =(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser())).getUid();
-            Driver driver = new Driver(id,firstname,lastname,email,password,confirmpassword,vehicleBrand,licenseplate,"");
+            Driver driver = new Driver(id,firstname,lastname,email,password,confirmpassword,vehicleBrand,licenseplate,"",2);
             RegisterDriver(driver);
             FirebaseUser user = fAuth.getCurrentUser();
             fAuth.setLanguageCode("es");
@@ -314,6 +314,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+                mAuthProvider.logout();
             }else {
                 Toast.makeText(this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
             }

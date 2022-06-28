@@ -12,12 +12,15 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -95,6 +98,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LocationManager mLocationManager;
     private Button btnconnect ;
     Toolbar toolbar;
+    Dialog dialog;
+    private int role;
     private DriverProvider mDriverProvider;
 
     LocationListener locationListenerGPS = new LocationListener() {
@@ -195,7 +200,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mDriverProvider= new DriverProvider();
         mFusedLocation = LocationServices.getFusedLocationProviderClient(this);
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
+        dialog = new Dialog(this);
         mMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mMapFragment.getMapAsync(this);
         btnconnect = findViewById(R.id.btn_connect);
@@ -257,7 +262,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             drawer.closeDrawer(GravityCompat.START);
             return true;
         });
-
+       if (role!=2){
+           ShowAlertDialog();
+       }
     }
 
     private void goToMapDriverActivity(String idClient) {
@@ -276,6 +283,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 if (snapshot.exists()){
                     String firstname =snapshot.child("firstname").getValue().toString();
                     String email = snapshot.child("email").getValue().toString();
+                    role = Integer.parseInt(snapshot.child("role").getValue().toString());
                     username.setText(firstname);
                     emails.setText(email);
                 }
@@ -557,4 +565,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             mLocationManager.removeUpdates(locationListenerGPS);
         }
     }
+    private void ShowAlertDialog(){
+        dialog.setContentView(R.layout.alert_dialog);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(false);
+        Button btncontinue = dialog.findViewById(R.id.acceptreport);
+        btncontinue.setOnClickListener(v -> {
+            startActivity(new Intent(this,LoginActivity.class));
+            dialog.dismiss();
+            mAuthProvider.logout();
+        });
+        dialog.show();
+    }
+
 }

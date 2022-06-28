@@ -13,11 +13,12 @@ public class Driver {
     String vehicleBrand;
     String vehiclePlate;
     String image;
+    int role ;
 
     public Driver() {
     }
 
-    public Driver(String idDriver, String firstname, String lastName, String email, String password, String password2, String vehicleBrand, String vehiclePlate, String image) {
+    public Driver(String idDriver, String firstname, String lastName, String email, String password, String password2, String vehicleBrand, String vehiclePlate, String image,int role) {
         this.idDriver = idDriver;
         this.firstname = firstname;
         this.lastName = lastName;
@@ -27,6 +28,7 @@ public class Driver {
         this.vehicleBrand = vehicleBrand;
         this.vehiclePlate = vehiclePlate;
         this.image = image;
+        this.role =role;
     }
 
     public String getIdDriver() {
@@ -99,5 +101,13 @@ public class Driver {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
     }
 }

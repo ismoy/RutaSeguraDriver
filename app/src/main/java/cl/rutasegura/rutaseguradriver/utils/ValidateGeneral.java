@@ -11,7 +11,7 @@ public class ValidateGeneral {
 
     //Validacion regex para los campos
     public  boolean validarletras(String datos) {
-        return datos.matches("[a-zA-Z ]*");
+        return datos.matches("[a-zA-Z-ñÑ ]*");
     }
 
     //Validacion Patterns para el campo email
