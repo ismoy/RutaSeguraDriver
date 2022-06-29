@@ -233,7 +233,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             goToMapDriverActivity(idClient);
         }
         else {
-            generateToken();
             deleteDriverWorking();
             deleteDriverFound();
         }
@@ -262,9 +261,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             drawer.closeDrawer(GravityCompat.START);
             return true;
         });
-       if (role!=2){
-           ShowAlertDialog();
-       }
+
     }
 
     private void goToMapDriverActivity(String idClient) {
@@ -286,6 +283,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     role = Integer.parseInt(snapshot.child("role").getValue().toString());
                     username.setText(firstname);
                     emails.setText(email);
+                    generateToken();
+                }else {
+                    ShowAlertDialog();
                 }
             }
 

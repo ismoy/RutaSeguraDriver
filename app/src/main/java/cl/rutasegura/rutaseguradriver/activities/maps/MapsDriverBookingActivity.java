@@ -58,6 +58,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import cl.rutasegura.rutaseguradriver.Model.ClientProvider;
 import cl.rutasegura.rutaseguradriver.Model.FCMBody;
@@ -557,7 +558,12 @@ public class MapsDriverBookingActivity extends AppCompatActivity implements OnMa
                     String image = "";
                     if (dataSnapshot.hasChild("image")) {
                         image = dataSnapshot.child("image").getValue().toString();
-                        Picasso.with(MapsDriverBookingActivity.this).load(image).into(mImageViewBooking);
+                        if (Objects.equals(image, "")) {
+                            mImageViewBooking.setImageResource(R.drawable.man);
+                        }else {
+                            Picasso.with(MapsDriverBookingActivity.this).load(image).into(mImageViewBooking);
+
+                        }
                     }
                     mTextViewClientBooking.setText(name);
                     mTextViewEmailClientBooking.setText(email);
