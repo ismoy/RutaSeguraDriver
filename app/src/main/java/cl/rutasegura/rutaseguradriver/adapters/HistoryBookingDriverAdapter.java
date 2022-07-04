@@ -17,6 +17,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.Objects;
+
 import cl.rutasegura.rutaseguradriver.Model.ClientProvider;
 import cl.rutasegura.rutaseguradriver.Model.HistoryBooking;
 import cl.rutasegura.rutaseguradriver.R;
@@ -53,7 +55,13 @@ public class HistoryBookingDriverAdapter extends FirebaseRecyclerAdapter<History
                     holder.textViewName.setText(name);
                     if (dataSnapshot.hasChild("image")) {
                         String image = dataSnapshot.child("image").getValue().toString();
-                        Picasso.with(mContext).load(image).into(holder.imageViewHistoryBooking);
+                        if (Objects.equals(image, "")) {
+                            holder.imageViewHistoryBooking.setImageResource(R.drawable.man);
+                        }
+                        else {
+                            Picasso.with(mContext).load(image).into(holder.imageViewHistoryBooking);
+
+                        }
                     }
                 }
             }
